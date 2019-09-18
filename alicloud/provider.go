@@ -202,6 +202,7 @@ func Provider() terraform.ResourceProvider {
 			"alicloud_ots_instances":                  dataSourceAlicloudOtsInstances(),
 			"alicloud_ots_instance_attachments":       dataSourceAlicloudOtsInstanceAttachments(),
 			"alicloud_ots_tables":                     dataSourceAlicloudOtsTables(),
+			"alicloud_virtual_border_routers":         dataSourceAlicloudVirtualBorderRouters(),
 		},
 		ResourcesMap: map[string]*schema.Resource{
 			"alicloud_instance":                           resourceAliyunInstance(),
@@ -238,6 +239,7 @@ func Provider() terraform.ResourceProvider {
 			"alicloud_ess_alarm":                          resourceAlicloudEssAlarm(),
 			"alicloud_ess_scalinggroup_vserver_groups":    resourceAlicloudEssScalingGroupVserverGroups(),
 			"alicloud_vpc":                                resourceAliyunVpc(),
+			"alicloud_virtual_border_router":              resourceAlicloudVirtualBorderRouter(),
 			"alicloud_nat_gateway":                        resourceAliyunNatGateway(),
 			"alicloud_nas_file_system":                    resourceAlicloudNasFileSystem(),
 			"alicloud_nas_mount_target":                   resourceAlicloudNasMountTarget(),

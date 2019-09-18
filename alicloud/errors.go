@@ -117,6 +117,10 @@ const (
 	InvalidSnatEntryIdNotFound           = "InvalidSnatEntryId.NotFound"
 	IncorretSnatEntryStatus              = "IncorretSnatEntryStatus"
 	InvalidRouteEntryNotFound            = "InvalidRouteEntry.NotFound"
+
+	// VBR
+	InvalidVbrIdNotFound = "InvalidVbrId.NotFound"
+
 	// Forward
 	InvalidIpNotInNatgw           = "InvalidIp.NotInNatgw"
 	InvalidForwardTableIdNotFound = "InvalidForwardTableId.NotFound"

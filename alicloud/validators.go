@@ -1701,3 +1701,21 @@ func stringMatch(r *regexp.Regexp, message string) schema.SchemaValidateFunc {
 		return nil, nil
 	}
 }
+
+func validateVirtualBorderRouterVlanId(v interface{}, k string) (ws []string, errors []error) {
+	value := v.(int)
+	if value < 1 || value > 2999 {
+		errors = append(errors, fmt.Errorf("%q must contain a valid vlanId between 1 and 2999, got %q", k, string(value)))
+		return
+	}
+	return
+}
+
+func validateVBRStatus(v interface{}, k string) (ws []string, errors []error) {
+	value := v.(string)
+
+	if value != string("active") && value != string("terminated") {
+		errors = append(errors, fmt.Errorf("%q must be 'active' or 'terminated'.", k))
+	}
+	return
+}
